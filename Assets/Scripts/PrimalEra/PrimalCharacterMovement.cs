@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -21,7 +22,11 @@ public class PrimalCharacterMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     public Vector3 direction;
+
+    public int runningSpeed = 6;
+    public int walkingSpeed = 3;
     [SerializeField] private PrimalAnimationController primalAnimationController;
+    private bool isStabbing;
 
     
     private void Update()
@@ -41,6 +46,8 @@ public class PrimalCharacterMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            if (isStabbing)
+                return;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity,
                 turnSmoothTime);
@@ -54,17 +61,29 @@ public class PrimalCharacterMovement : MonoBehaviour
                 primalAnimationController.PlayJump();
             }
 
+            if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded)
+            {
+                primalAnimationController.PlayBackflip();
+
+                StartCoroutine(Jump());
+                IEnumerator Jump()
+                {
+                    yield return new WaitForSeconds(0.5f);
+                    velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+                }
+            }
+
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
             
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                speed = 12;
+                speed = runningSpeed;
                 primalAnimationController.PlayRun();
             }
             else
             {
-                speed = 6;
+                speed = walkingSpeed;
                 primalAnimationController.PlayWalk();
             }
         }
@@ -73,6 +92,32 @@ public class PrimalCharacterMovement : MonoBehaviour
             primalAnimationController.PlayIdle();
         }
 
+        if (!isGrounded)
+            return;
         
+        if (Input.GetMouseButtonDown(0))
+        {
+            isStabbing = true;
+            primalAnimationController.PlayStabbingOne();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            isStabbing = true;
+            primalAnimationController.PlayStabbingTwo();
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            isStabbing = true;
+            primalAnimationController.PlayStabbingThree();
+        }
+        
+    }
+
+    //calling from animation
+    public void DisableStabbing()
+    {
+        isStabbing = false;
     }
 }

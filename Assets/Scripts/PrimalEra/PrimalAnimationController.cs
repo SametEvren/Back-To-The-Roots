@@ -31,4 +31,27 @@ public class PrimalAnimationController : MonoBehaviour
     {
         animator.SetTrigger("Jump");
     }
+
+    public void PlayBackflip()
+    {
+        animator.SetTrigger("Backflip");
+    }
+
+    public void PlayStabbingOne()
+    {
+        animator.SetTrigger("Stabbing");
+    }
+    
+    public void PlayStabbingTwo()
+    {
+        animator.SetTrigger("StabbingTwo");
+    }
+    
+    public void PlayStabbingThree()
+    {
+        animator.SetTrigger("StabbingThree");
+    }
+    
+    
+    
 }
