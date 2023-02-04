@@ -12,6 +12,7 @@ public class AnimalWandering : MonoBehaviour
     public Transform[] pathElementsTransform;
     public float duration = 20f;
     public float idleTime = 2f;
+    [SerializeField] private string preferableAnimation;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class AnimalWandering : MonoBehaviour
     private void Wander()
     {
         SetPath();
-        GetComponent<AnimationControl>().SetAnimation("isRunning");
+        GetComponent<AnimationControl>().SetAnimation(preferableAnimation);
         transform.DOPath(path, duration, PathType.Linear).SetLookAt(0.01f).OnComplete(() =>
         {
             GetComponent<AnimationControl>().SetAnimationIdle();
