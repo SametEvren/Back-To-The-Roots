@@ -21,6 +21,7 @@ public class PrimalCharacterMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     public Vector3 direction;
+    [SerializeField] private PrimalAnimationController primalAnimationController;
 
     
     private void Update()
@@ -50,10 +51,28 @@ public class PrimalCharacterMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+                primalAnimationController.PlayJump();
             }
 
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
+            
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 12;
+                primalAnimationController.PlayRun();
+            }
+            else
+            {
+                speed = 6;
+                primalAnimationController.PlayWalk();
+            }
         }
+        else
+        {
+            primalAnimationController.PlayIdle();
+        }
+
+        
     }
 }
