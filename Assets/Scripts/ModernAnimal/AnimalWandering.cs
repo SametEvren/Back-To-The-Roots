@@ -12,8 +12,6 @@ public class AnimalWandering : MonoBehaviour
     public Transform[] pathElementsTransform;
     public float duration = 20f;
     public float idleTime = 2f;
-    public float durationRandMin, durationRandMax;
-    public float idleRandMin, idleRandMax;
 
     private void Start()
     {
@@ -24,22 +22,6 @@ public class AnimalWandering : MonoBehaviour
     private void Wander()
     {
         SetPath();
-        if (path.Length > 6)
-        {
-            durationRandMin = 40;
-            durationRandMax = 50;
-            idleRandMin = 7;
-            idleRandMax = 12;
-        }
-        else
-        {
-            durationRandMin = 5;
-            durationRandMax = 10;
-            idleRandMin = 2;
-            idleRandMax = 5;
-        }
-        duration = UnityEngine.Random.Range(durationRandMin, durationRandMax);
-        idleTime = UnityEngine.Random.Range(idleRandMin, idleRandMax);
         GetComponent<AnimationControl>().SetAnimation("isRunning");
         transform.DOPath(path, duration, PathType.Linear).SetLookAt(0.01f).OnComplete(() =>
         {
