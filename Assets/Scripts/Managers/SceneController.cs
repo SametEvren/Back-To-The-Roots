@@ -10,5 +10,15 @@ namespace Managers
         {
             SceneManager.LoadScene("ModernWorld");
         }
+
+        public void LoadFuturisticWorld()
+        {
+            SceneManager.LoadScene("FuturisticWorld");
+        }
+
+        public void LoadPrimalWorld()
+        {
+            SceneManager.LoadScene("PrimalWorld");
+        }
     }
 }

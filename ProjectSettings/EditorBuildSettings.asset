@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ModernWorld.unity
     guid: fb1d400b21e9f71488255b305769112d
+  - enabled: 1
+    path: Assets/Scenes/FuturisticWorld.unity
+    guid: 5bb9a5463a507694c8b3f9c2b730e5fb
+  - enabled: 1
+    path: Assets/Scenes/PrimalWorld.unity
+    guid: 222bd8d398f00a649ab6372760e7173c
   m_configObjects: {}

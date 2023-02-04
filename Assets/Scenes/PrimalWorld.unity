@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7a1b3ec385048ec498d38d0dad888dae, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 77037249f24214345a4654a4371e0a0b, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -7478,10 +7478,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
-    - target: {fileID: 123684, guid: 977d462d3da090443aa549827d636355, type: 3}
-      propertyPath: m_TagString
-      value: ModernMirror
-      objectReference: {fileID: 0}
     - target: {fileID: 423996, guid: 977d462d3da090443aa549827d636355, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7548,24 +7544,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977d462d3da090443aa549827d636355, type: 3}
---- !u!1 &569328260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 123684, guid: 977d462d3da090443aa549827d636355, type: 3}
-  m_PrefabInstance: {fileID: 569328259}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &569328261
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569328260}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.025057543}
-  m_Center: {x: 0, y: 0, z: 0.01612455}
 --- !u!1 &570732098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1534963466095838, guid: ea2deeacba3a84df18be6183612ea07d, type: 3}
@@ -7820,7 +7798,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588518297}
-  m_LocalRotation: {x: 0.11226922, y: 0.0000000074034774, z: -8.3647095e-10, w: 0.99367785}
+  m_LocalRotation: {x: 0.11226922, y: 0.000000007403477, z: -8.364709e-10, w: 0.99367785}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15641,50 +15619,6 @@ Transform:
   m_Father: {fileID: 1018914800}
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 218.582, z: 0}
---- !u!1 &1165021674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1165021676}
-  - component: {fileID: 1165021675}
-  m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1165021675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165021674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d97660d4a9fff848a13d8eca4c3497a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1165021676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165021674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 120.94654, y: 10.775683, z: 153.19792}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1171483500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5823802660453535635, guid: 30c7ae5e3fc212948b7308cffdc45b53, type: 3}
@@ -30219,7 +30153,6 @@ GameObject:
   - component: {fileID: 95081358322851184}
   - component: {fileID: 143283753209210543}
   - component: {fileID: 143283753209210545}
-  - component: {fileID: 143283753209210546}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -39626,15 +39559,3 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &143283753209210546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512719189615408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef693575facc1d5428315da5c45a4970, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

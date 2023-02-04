@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3f7de857eeb4b9a49911661d97f562d9, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -477,7 +477,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588518297}
-  m_LocalRotation: {x: 0.12425664, y: -0.0000000042682595, z: 5.34502e-10, w: 0.99225014}
+  m_LocalRotation: {x: 0.12425664, y: 0.0000000042682573, z: -5.3450167e-10, w: 0.99225014}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -926,7 +926,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992915116}
-  m_LocalRotation: {x: 0.12425664, y: -0.0000000042682595, z: 5.3450194e-10, w: 0.99225014}
+  m_LocalRotation: {x: 0.12425664, y: 0.0000000042682577, z: -5.345017e-10, w: 0.99225014}
   m_LocalPosition: {x: 0, y: 2.1869998, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1250,7 +1250,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291931511}
-  m_LocalRotation: {x: 0.17385432, y: -0.000000008472173, z: 0.0000000014957012, w: 0.9847714}
+  m_LocalRotation: {x: 0.17385432, y: 0.000000008472179, z: -0.0000000014957022, w: 0.9847714}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1504,7 +1504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775593776}
-  m_LocalRotation: {x: 0.17385432, y: 0.000000008472179, z: -0.0000000014957022, w: 0.9847714}
+  m_LocalRotation: {x: 0.17385432, y: -0.000000008472173, z: 0.0000000014957012, w: 0.9847714}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
