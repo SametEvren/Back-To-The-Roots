@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         //Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
-        Idle();
+        Walk();
     }
     private void SearchWalkPoint()
     {
@@ -138,18 +138,30 @@ public class EnemyAI : MonoBehaviour
     public void Idle()
     {
         animator.SetBool("isIdling",true);
+        animator.SetBool("isWalking",false);
         animator.SetBool("isRunning",false);
         animator.SetBool("isAttacking",false);
     }
+    public void Walk()
+    {
+        animator.SetBool("isIdling",false);
+        animator.SetBool("isWalking",true);
+        animator.SetBool("isRunning",false);
+        animator.SetBool("isAttacking",false);
+    }
+    
+    
     public void Run()
     {
         animator.SetBool("isIdling",false);
+        animator.SetBool("isWalking",false);
         animator.SetBool("isRunning",true);
         animator.SetBool("isAttacking",false);
     }
     public void Attack()
     {
         animator.SetBool("isIdling",false);
+        animator.SetBool("isWalking",false);
         animator.SetBool("isRunning",false);
         animator.SetBool("isAttacking",true);
     }
