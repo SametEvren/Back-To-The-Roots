@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ public class CharacterStats : MonoBehaviour
         health -= damage;
         healthBar.UpdateHealthBar(maxHealth,health);
     }
-    
-    
+
+    private void Update()
+    {
+        health = Mathf.Clamp(health, 0, 100);
+    }
 }
