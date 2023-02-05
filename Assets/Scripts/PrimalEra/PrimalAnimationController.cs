@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PrimalEra;
 using UnityEngine;
 
 public class PrimalAnimationController : MonoBehaviour
@@ -51,7 +52,16 @@ public class PrimalAnimationController : MonoBehaviour
     {
         animator.SetTrigger("StabbingThree");
     }
-    
+
+    public void Dead()
+    {
+        animator.SetBool("Idle",false);
+        animator.SetBool("Walk", false);
+        animator.SetBool("Run", false);
+        animator.SetBool("Death", true);
+        GetComponent<PrimalCharacterMovement>().isDead = true;
+        FightManager.Instance.retryButton.SetActive(true);
+    }
     
     
 }

@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Utility;
 
 namespace PrimalEra
 {
-    public class FightManager : MonoBehaviour
+    public class FightManager : Instancable<FightManager>
     {
         public GameObject enemyHealthBar;
         public CharacterCombat characterCombat;
@@ -14,6 +16,7 @@ namespace PrimalEra
         public List<GameObject> swordVersions;
         public int index;
         public TextMeshProUGUI name;
+        public GameObject nextButton, retryButton, startAllOverButton;
 
         private void Start()
         {
@@ -31,6 +34,22 @@ namespace PrimalEra
             swordVersions[index].gameObject.SetActive(true);
             characterCombat.enemyAI = animals[index];
             name.text = animals[index].name;
+        }
+        
+        public void NextAnimal()
+        {
+            PlayerPrefs.SetInt("AnimalIndex",PlayerPrefs.GetInt("AnimalIndex",0) + 1);
+            SceneManager.LoadScene("PrimalWorld");
+        }
+
+        public void Retry()
+        {
+            SceneManager.LoadScene("PrimalWorld");
+        }
+
+        public void StartAllOver()
+        {
+            SceneManager.LoadScene("Space");
         }
     }
 }

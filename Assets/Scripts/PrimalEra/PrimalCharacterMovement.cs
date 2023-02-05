@@ -27,10 +27,12 @@ public class PrimalCharacterMovement : MonoBehaviour
     public int walkingSpeed = 3;
     [SerializeField] private PrimalAnimationController primalAnimationController;
     private bool isStabbing;
-
+    public bool isDead;
     
     private void Update()
     {
+        if (isDead)
+            return;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)

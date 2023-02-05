@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using PrimalEra;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -114,6 +115,8 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDead)
+            return;
         health -= damage;
         healthBar.UpdateHealthBar(maxHealth,health);
 
@@ -191,21 +194,15 @@ public class EnemyAI : MonoBehaviour
         IEnumerator LoadNewAnimal()
         {
             yield return new WaitForSeconds(5f);
-            NextAnimal();
+            if(name != "Columbian Mammoth")
+                FightManager.Instance.nextButton.SetActive(true);
+            else
+            {
+                StartCoroutine(Tutorial.Instance.IterateSentence());
+            }
         }
     }
-
-    public void Retry()
-    {
-        
-    }
-
-    public void NextAnimal()
-    {
-        PlayerPrefs.SetInt("AnimalIndex",PlayerPrefs.GetInt("AnimalIndex",0) + 1);
-        SceneManager.LoadScene("PrimalWorld");
-    }
-
+    
     public void AttackTheCharacter()
     {
         if(playerIn)

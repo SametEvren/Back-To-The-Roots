@@ -13,6 +13,8 @@ public class CharacterStats : MonoBehaviour
     {
         health -= damage;
         healthBar.UpdateHealthBar(maxHealth,health);
+        if(health <= 0)
+            GetComponent<PrimalAnimationController>().Dead();
     }
 
     private void Update()

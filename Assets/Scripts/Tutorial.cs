@@ -3,21 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using PrimalEra;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Utility;
 
-public class Tutorial : MonoBehaviour
+public class Tutorial : Instancable<Tutorial>
 {
     [SerializeField] private List<string> sentences;
     private int sentenceIndex;
     public TextMeshProUGUI textArea;
     [SerializeField] private Color colorAlphaZero, colorAlphaHundred;
+    public bool canStart;
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine(IterateSentence());
+        if(canStart)
+            StartCoroutine(IterateSentence());
     }
 
-    private IEnumerator IterateSentence()
+    public IEnumerator IterateSentence()
     {
         yield return new WaitForSeconds(3f);
         var sequence = DOTween.Sequence()
@@ -25,7 +30,15 @@ public class Tutorial : MonoBehaviour
             .Append(textArea.DOColor(colorAlphaZero,1f).SetDelay(1f))
             .OnComplete(() =>
             {
-                if (sentenceIndex >= sentences.Count - 1) return;
+                if (sentenceIndex >= sentences.Count - 1)
+                {
+                    if (SceneManager.GetActiveScene().name == "PrimalWorld")
+                    {
+                        FightManager.Instance.startAllOverButton.SetActive(true);
+                        PlayerPrefs.SetInt("AnimalIndex",0);
+                    }
+                    return;
+                }
                 
                 sentenceIndex++;
                 textArea.text = sentences[sentenceIndex];
