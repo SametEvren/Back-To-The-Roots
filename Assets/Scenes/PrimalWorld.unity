@@ -3251,6 +3251,70 @@ MonoBehaviour:
   duration: 120
   idleTime: 10
   preferableAnimation: isWalking
+--- !u!1 &190381064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190381066}
+  - component: {fileID: 190381065}
+  m_Layer: 0
+  m_Name: TutorialFirst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &190381065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190381064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fabae75f42a9f4f85866133e35d8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - Zarek and his crew set out on a journey to save their species from a deadly disease.
+  - Their only hope was to find a fossil of a long-extinct animal,
+  - the Columbian Mammoth, and use its DNA to create a cure.
+  - However, as he traveled through space, he encountered a break in time that sent
+    him back to the ice age.
+  - THE TIME WAS B.C. 24.000!
+  - There, he found himself face to face with the very animal they were searching
+    for, living and breathing in its natural habitat.
+  - Zarek soon realized that the key to saving his species was not to simply find
+    the fossil,
+  - but to embrace his primal roots and learn to survive in this harsh, primitive
+    world.
+  - As he ventured further, he will be encountering many challenges and fierce enemies,
+    including the Ancient Bison.
+  - Defeat your enemies one by one to find the Columbian Mammooth!
+  textArea: {fileID: 155806195}
+  colorAlphaZero: {r: 0, g: 0, b: 0, a: 0}
+  colorAlphaHundred: {r: 0, g: 0, b: 0, a: 1}
+  canStart: 1
+--- !u!4 &190381066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190381064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -189.41742, y: 2.6811714, z: 36.52856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192640623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9984,7 +10048,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588518297}
-  m_LocalRotation: {x: 0.112269215, y: 8.7694803e-16, z: 2.2614407e-17, w: 0.99367785}
+  m_LocalRotation: {x: 0.112269215, y: 4.3847402e-16, z: 1.1307203e-17, w: 0.99367785}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23789,7 +23853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670293855652754, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.03605
+      value: 53.2
       objectReference: {fileID: 0}
     - target: {fileID: 4670293855652754, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30195,7 +30259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO BACK IN TIME
+  m_text: BECAME MORE PRIMAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01bab4c0a78f6ee46a5aa0691dae348b, type: 2}
   m_sharedMaterial: {fileID: 2870698174279434487, guid: 01bab4c0a78f6ee46a5aa0691dae348b, type: 2}
@@ -30222,12 +30286,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 256.79
+  m_fontSize: 176.51
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 256.79
+  m_fontSizeMax: 176.51
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

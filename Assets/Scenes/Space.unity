@@ -308,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Welcome to ''Roots'', a journey through time and space. '
+  m_text: Welcome to "Back to the Root," a journey through time and space.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01bab4c0a78f6ee46a5aa0691dae348b, type: 2}
   m_sharedMaterial: {fileID: 2870698174279434487, guid: 01bab4c0a78f6ee46a5aa0691dae348b, type: 2}
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 88.79
+  m_fontSize: 75.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1543,19 +1543,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - '"Welcome to ''Roots'', a journey through time and space.'
-  - You start as an astronaut, floating in the vast emptiness of space.
-  - But as you approach planet Earth, you spot a strange portal and decide to investigate.
-  - As you pass through the portal, you find yourself transported to a primal environment.
-  - Here, you must use your wit and instincts to survive in this harsh and untamed
-    world.
-  - Explore your surroundings, hunt for food, and build shelter to protect yourself
-    from the elements.
-  - With each new discovery, you will peel away the layers of civilization and tap
-    into your primal roots.
-  - You will learn the ways of this ancient world and become one with the environment.
-  - Embark on this adventure and experience the thrill of returning to your roots.
-  - Can you survive in this harsh and unforgiving world? Let the journey begin!"
+  - Welcome to "Back to the Root," a journey through time and space.
+  - This is year 3023. Some part of humanity moved to a different planet due to population
+    issues.
+  - Zarek is the last hope for his species facing extinction in the new planet they're
+    living in.
+  - but a cure exists in the blood of an extinct Colombian Mammoth.
+  - Zarek sets out on a mission with his crew but becomes the sole survivor.
+  - He wants to find that Colombian Mammoth's fossil no matter what.
+  - He must use his spacesuit to journey back to Earth where the cure awaits.
+  - Join Zarek on a journey of bravery and determination to save his species.
   textArea: {fileID: 341626855}
   colorAlphaZero: {r: 1, g: 1, b: 1, a: 0}
   colorAlphaHundred: {r: 1, g: 1, b: 1, a: 1}
