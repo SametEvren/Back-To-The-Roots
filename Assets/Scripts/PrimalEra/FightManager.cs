@@ -11,6 +11,7 @@ namespace PrimalEra
         public CharacterCombat characterCombat;
         public List<EnemyAI> animals;
         public List<GameObject> characterVersions;
+        public List<GameObject> swordVersions;
         public int index;
         public TextMeshProUGUI name;
 
@@ -22,10 +23,12 @@ namespace PrimalEra
             {
                 animals[i].gameObject.SetActive(false);
                 characterVersions[i].gameObject.SetActive(false);
+                swordVersions[i].gameObject.SetActive(false);
             }
 
             animals[index].gameObject.SetActive(true);
             characterVersions[index].gameObject.SetActive(true);
+            swordVersions[index].gameObject.SetActive(true);
             characterCombat.enemyAI = animals[index];
             name.text = animals[index].name;
         }
