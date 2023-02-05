@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour
@@ -33,6 +35,8 @@ public class EnemyAI : MonoBehaviour
     public bool playerIn;
 
     public HealthBar healthBar;
+
+    public bool isDead;
     
     private void Update()
     {
@@ -41,6 +45,8 @@ public class EnemyAI : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        if (isDead)
+            return;
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
@@ -108,7 +114,12 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
         healthBar.UpdateHealthBar(maxHealth,health);
-        //if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+
+        if (health <= 0)
+        {
+            isDead = true;
+            Dead();
+        }
     }
     private void DestroyEnemy()
     {
@@ -164,6 +175,33 @@ public class EnemyAI : MonoBehaviour
         animator.SetBool("isWalking",false);
         animator.SetBool("isRunning",false);
         animator.SetBool("isAttacking",true);
+    }
+
+    public void Dead()
+    {
+        animator.SetBool("isIdling",false);
+        animator.SetBool("isWalking",false);
+        animator.SetBool("isRunning",false);
+        animator.SetBool("isAttacking",false);
+        animator.SetBool("isDead",true);
+
+        StartCoroutine(LoadNewAnimal());
+        IEnumerator LoadNewAnimal()
+        {
+            yield return new WaitForSeconds(5f);
+            NextAnimal();
+        }
+    }
+
+    public void Retry()
+    {
+        
+    }
+
+    public void NextAnimal()
+    {
+        PlayerPrefs.SetInt("AnimalIndex",PlayerPrefs.GetInt("AnimalIndex",0) + 1);
+        SceneManager.LoadScene("PrimalWorld");
     }
 
     public void AttackTheCharacter()

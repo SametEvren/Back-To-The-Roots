@@ -4888,6 +4888,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &311131087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9223,6 +9224,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &557479141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9724,7 +9726,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588518297}
-  m_LocalRotation: {x: 0.112269215, y: 4.3847402e-16, z: 1.1307203e-17, w: 0.99367785}
+  m_LocalRotation: {x: 0.112269215, y: 8.7694803e-16, z: 2.2614407e-17, w: 0.99367785}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10741,6 +10743,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &675552980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14404,6 +14407,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &901658773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15080,6 +15084,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &954993913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19400,6 +19405,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!195 &1220218389 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195796558909839916, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
@@ -21064,6 +21070,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &1303836469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22429,7 +22436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1004320998425248, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1004320998425248, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
       propertyPath: m_TagString
@@ -28073,7 +28080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1363182470599466, guid: 74f9ab686c57306488ebc539aac52452, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1363182470599466, guid: 74f9ab686c57306488ebc539aac52452, type: 3}
       propertyPath: m_TagString
@@ -28670,6 +28677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713576327}
+  - component: {fileID: 1713576328}
   m_Layer: 0
   m_Name: FightManager
   m_TagString: Untagged
@@ -28692,6 +28700,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713576328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713576326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1767c8b1e532cda4e9ae709cc0d83815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealthBar: {fileID: 471297406}
+  characterCombat: {fileID: 143283753209210550}
+  animals:
+  - {fileID: 1220218388}
+  - {fileID: 2070562562}
+  - {fileID: 954993912}
+  - {fileID: 1303836468}
+  - {fileID: 311131086}
+  - {fileID: 1784428714}
+  - {fileID: 557479140}
+  - {fileID: 2074663825}
+  - {fileID: 675552979}
+  - {fileID: 901658772}
+  index: 0
 --- !u!1001 &1716984316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29839,6 +29873,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &1784428715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35426,6 +35461,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &2070562563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35487,6 +35523,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playerIn: 0
   healthBar: {fileID: 471297408}
+  isDead: 0
 --- !u!65 &2074663826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48713,6 +48750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b010794cd3ce7394693d62e8d95568c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAI: {fileID: 901658772}
+  enemyAI: {fileID: 1220218388}
   strength: 15
   enemyIn: 0
