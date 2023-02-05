@@ -37,6 +37,8 @@ public class EnemyAI : MonoBehaviour
     public HealthBar healthBar;
 
     public bool isDead;
+
+    public string name;
     
     private void Update()
     {

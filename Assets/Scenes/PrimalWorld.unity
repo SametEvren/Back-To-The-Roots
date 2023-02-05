@@ -4889,6 +4889,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Short Faced Bear
 --- !u!65 &311131087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9225,6 +9226,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Shasta Ground Sloth
 --- !u!65 &557479141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10744,6 +10746,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Sabertooth
 --- !u!65 &675552980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14408,6 +14411,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Columbian Mammoth
 --- !u!65 &901658773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15085,6 +15089,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Mastodon
 --- !u!65 &954993913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19406,6 +19411,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Ancient Bison
 --- !u!195 &1220218389 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195796558909839916, guid: 63a25a9220c8ce64892efc817ac9f827, type: 3}
@@ -21071,6 +21077,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: American Male Lion
 --- !u!65 &1303836469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28725,7 +28732,19 @@ MonoBehaviour:
   - {fileID: 2074663825}
   - {fileID: 675552979}
   - {fileID: 901658772}
+  characterVersions:
+  - {fileID: 1333998077961054}
+  - {fileID: 1823916756576386}
+  - {fileID: 1339659945152342}
+  - {fileID: 1983147343940064}
+  - {fileID: 1433697112169424}
+  - {fileID: 1062981027867748}
+  - {fileID: 1856921931299874}
+  - {fileID: 1846137318112770}
+  - {fileID: 1325216108261730}
+  - {fileID: 1355062885137938}
   index: 0
+  name: {fileID: 765534192}
 --- !u!1001 &1716984316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29874,6 +29893,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Mountain Puma
 --- !u!65 &1784428715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35462,6 +35482,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Harlans Ground Sloth
 --- !u!65 &2070562563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35524,6 +35545,7 @@ MonoBehaviour:
   playerIn: 0
   healthBar: {fileID: 471297408}
   isDead: 0
+  name: Dire Wolf
 --- !u!65 &2074663826
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace PrimalEra
@@ -9,19 +10,24 @@ namespace PrimalEra
         public GameObject enemyHealthBar;
         public CharacterCombat characterCombat;
         public List<EnemyAI> animals;
+        public List<GameObject> characterVersions;
         public int index;
+        public TextMeshProUGUI name;
 
         private void Start()
         {
             index = PlayerPrefs.GetInt("AnimalIndex", 0);
-            
-            foreach (var animal in animals)
+
+            for (int i = 0; i < animals.Count; i++)
             {
-                animal.gameObject.SetActive(false);
+                animals[i].gameObject.SetActive(false);
+                characterVersions[i].gameObject.SetActive(false);
             }
 
             animals[index].gameObject.SetActive(true);
+            characterVersions[index].gameObject.SetActive(true);
             characterCombat.enemyAI = animals[index];
+            name.text = animals[index].name;
         }
     }
 }
