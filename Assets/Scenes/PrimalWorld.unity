@@ -9397,6 +9397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 123684, guid: 977d462d3da090443aa549827d636355, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423996, guid: 977d462d3da090443aa549827d636355, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -20806,7 +20810,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291931511}
-  m_LocalRotation: {x: 0.17385432, y: 0.000000008472179, z: -0.0000000014957022, w: 0.9847714}
+  m_LocalRotation: {x: 0.17385432, y: 0.0000000085524015, z: -0.000000001509865, w: 0.9847714}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
