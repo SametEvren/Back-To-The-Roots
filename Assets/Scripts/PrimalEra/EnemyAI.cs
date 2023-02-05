@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public float maxHealth;
     public float health;
     public int strength;
 
@@ -30,6 +31,8 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public bool playerIn;
+
+    public HealthBar healthBar;
     
     private void Update()
     {
@@ -103,7 +106,7 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        healthBar.UpdateHealthBar(maxHealth,health);
         //if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()

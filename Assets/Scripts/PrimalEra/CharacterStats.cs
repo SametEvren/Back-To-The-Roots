@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
-    public int hp;
+    public int health;
+    public int maxHealth;
+    public HealthBar healthBar;
     
     public void TakeDamage(int damage)
     {
-        hp -= damage;
+        health -= damage;
+        healthBar.UpdateHealthBar(maxHealth,health);
     }
+    
     
 }
