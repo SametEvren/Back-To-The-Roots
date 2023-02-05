@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class SpaceCharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
@@ -11,7 +11,6 @@ public class CharacterMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     public Vector3 direction;
-    public Animator animator;
 
     private void Update()
     {
@@ -19,6 +18,17 @@ public class CharacterMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 12f;
+            GetComponent<AstronautAnimationController>().flyFaster = true;
+        }
+        else
+        {
+            speed = 6f;
+            GetComponent<AstronautAnimationController>().flyFaster = false;
+
+        }
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -28,41 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                PlayRun();
-                speed = 10f;
-            }
-            else
-            {
-                PlayWalk();
-                speed = 6f;
-            }
         }
-        else
-        {
-            PlayIdle();
-        }
-    }
-    
-    public void PlayIdle()
-    {
-        animator.SetBool("Idle",true);
-        animator.SetBool("Walk", false);
-        animator.SetBool("Run", false);
-    }
-
-    public void PlayWalk()
-    {
-        animator.SetBool("Idle",false);
-        animator.SetBool("Walk", true);
-        animator.SetBool("Run", false);
-    }
-
-    public void PlayRun()
-    {
-        animator.SetBool("Idle",false);
-        animator.SetBool("Walk", false);
-        animator.SetBool("Run", true);
+        
     }
 }

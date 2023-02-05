@@ -1504,7 +1504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775593776}
-  m_LocalRotation: {x: 0.17385432, y: -0.000000008472173, z: 0.0000000014957012, w: 0.9847714}
+  m_LocalRotation: {x: 0.17385432, y: 0.000000008472179, z: -0.0000000014957022, w: 0.9847714}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1774,17 +1774,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6114686020121851791, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
   m_PrefabInstance: {fileID: 6112571190789846891}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4377797706924262 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6136502817483788740, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
-  m_PrefabInstance: {fileID: 6112571190789846891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309382824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d1e4118ffaccc40a495a7eaac80d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4377797706924263 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6162609710048012827, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
@@ -1814,8 +1803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe124d56e2b354b47a1b9d44ca79c203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMovement: {fileID: 4377797706924262}
+  characterMovement: {fileID: 6112571190789846893}
   animator: {fileID: 4377797706924263}
+  flyFaster: 0
 --- !u!1001 &6112571190789846891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1887,5 +1877,28 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bbfda51470ccfc042af015e0d820c847, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6136502817483788740, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
+--- !u!143 &6112571190789846892 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 6136502817483788762, guid: 2efa927674d7ffb4ab17092a2b66f01e, type: 3}
+  m_PrefabInstance: {fileID: 6112571190789846891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6112571190789846893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309382824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32637d354bdba74ba0ef67e81dd52a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 6112571190789846892}
+  cam: {fileID: 992915119}
+  speed: 6
+  turnSmoothTime: 0.1
+  direction: {x: 0, y: 0, z: 0}
